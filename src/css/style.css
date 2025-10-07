@@ -1,0 +1,143 @@
+/* =========================
+   Fondo global
+   ========================= */
+body{
+  background: url("../img/restaurante.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color:#fff;
+  margin:0;
+}
+
+/* Contenedor principal */
+#principal{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Tarjetas (glass)
+   ========================= */
+.card,
+.glass-card{
+  background: rgba(0,0,0,.55) !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.35);
+  color:#f5f7fb;
+}
+
+/* Títulos dentro de cards */
+.card h1,.card h2,.card h3{ 
+  color:#fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+
+/* =========================
+   Tablas (glass)
+   ========================= */
+.table,
+.glass-table{
+  /* Anula fondo opaco de Bootstrap */
+  --bs-table-bg: transparent;
+  background-color: rgba(255,255,255,0.18);
+  /* Orden correcto de prefijos */
+  -webkit-backdrop-filter: blur(6px); /* Safari primero */
+  backdrop-filter: blur(6px);         /* Estándar */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Cabecera translúcida */
+.table thead th{
+  background: rgba(0,0,0,.6) !important;
+  color:#fff !important;
+  border-color: rgba(255,255,255,.2) !important;
+}
+
+/* Celdas del cuerpo: velo suave para legibilidad */
+.table tbody tr > *{
+  background: rgba(0,0,0,.35) !important;
+  color:#f7f9fc !important;
+  border-color: rgba(255,255,255,.2) !important;
+}
+
+/* Rayado de .table-striped: evita grises opacos de Bootstrap */
+.table.table-striped > tbody > tr:nth-of-type(odd) > *{
+  --bs-table-accent-bg: transparent;
+  background: rgba(0,0,0,.45) !important;
+}
+
+/* Hover */
+.table tbody tr:hover > *{
+  background: rgba(255,255,255,.25) !important;
+}
+
+/* =========================
+   Modo edición en línea
+   ========================= */
+/* Inputs dentro de celdas: encajan y son legibles */
+.table td input.form-control{
+  width: 100%;
+  padding: .32rem .5rem;
+  font-size: .95rem;
+  height: auto;
+  background: rgba(255,255,255,.98) !important;
+  color:#111 !important;
+  border:1px solid rgba(0,0,0,.15) !important;
+  border-radius: 6px;
+}
+
+/* Placeholder visible */
+.table td input.form-control::placeholder{
+  color:#555 !important;
+  opacity:1;
+}
+
+/* Enfoque accesible */
+.table td input.form-control:focus{
+  border-color:#198754 !important;
+  box-shadow: 0 0 0 .2rem rgba(25,135,84,.25) !important;
+  outline:none;
+}
+
+/* Botones en columnas de acciones ocupan todo el ancho de su celda */
+/*.table td .btn{ width: 100%; }*/
+
+/* =========================
+   Fila modificable (si la usas)
+   ========================= */
+.fila-modificable{ border: 4px solid gray !important; }
+.fila-modificable td{ background-color: lightsalmon !important; }
+
+/* =========================
+   Botones (toque general)
+   ========================= */
+.btn{
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform .15s ease;
+}
+.btn:hover{ transform: scale(1.04); }
+
+
+
+/* =========================
+   Formularios y layout
+   ========================= */
+.card .form-label{ color:#fff; font-weight:600; }
+.card .form-control, .card .form-select, .card textarea{
+  background: rgba(255,255,255,.98) !important;
+  color:#111 !important;
+  border:1px solid rgba(0,0,0,.15) !important;
+  border-radius: 10px;
+}
+.card .form-control:focus, .card .form-select:focus, .card textarea:focus{
+  border-color:#0d6efd !important;
+  box-shadow: 0 0 0 .2rem rgba(13,110,253,.25) !important;
+  outline:none;
+}
+.badge{ font-size:.85rem; }
+.alert{ border-radius:12px; }
