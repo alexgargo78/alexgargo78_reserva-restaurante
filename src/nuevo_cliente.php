@@ -4,8 +4,6 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $conexion = mysqli_connect("mysql-alexgargo78.alwaysdata.net", "432730_", "Lequio.78", "alexgargo78_reserva-restaurante");
 $conexion->set_charset("utf8mb4");
 
-//$conexion = mysqli_connect("db", "root", "test", "reserva-restaurante");
-
 $mensaje = ""; $tipoMsg = "warning";
 
 $nombre     = $_POST["nombre"]     ?? "";
@@ -41,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <title>Nueva reserva</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <div class="container p-4" id="principal">
